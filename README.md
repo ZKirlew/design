@@ -45,4 +45,4 @@ Tip: if dragging folders doesn't work in your browser, use Chrome or Edge, which
 
 - **Text:** open the file on GitHub, click the pencil icon, edit and commit.
 - **Resume:** upload your new PDF into `assets/` with the exact name `Zayna-Kirlew-Resume.pdf`. It replaces the old one.
-- **After changing CSS or JS:** in every HTML file, change the `?v=20261124b` stamps to a new value (e.g. `?v=20261201a`) so browsers fetch the new version.
+- **After changing CSS or JS:** in every HTML file, change the `?v=20261125b` stamps to a new value (e.g. `?v=20261201a`) so browsers fetch the new version.
