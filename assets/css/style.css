@@ -425,6 +425,12 @@ em { font-style: italic; }
 .card-project p { margin: 0; font-size: 16px; line-height: 1.65; color: var(--body); }
 .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); gap: 64px 40px; }
 .card-project .card-media { align-self: stretch; margin-bottom: 4px; }
+/* A lone last card spans the row: image left, text right */
+@media (min-width: 900px) {
+  .card-grid > .card-project:last-child:nth-child(odd) { grid-column: 1 / -1; display: grid; grid-template-columns: 1fr 1fr; column-gap: 40px; row-gap: 12px; align-content: center; justify-items: start; }
+  .card-grid > .card-project:last-child:nth-child(odd) > * { grid-column: 2; }
+  .card-grid > .card-project:last-child:nth-child(odd) > .card-media { grid-column: 1; grid-row: 1 / span 6; align-self: center; margin-bottom: 0; justify-self: stretch; }
+}
 .tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
 .tags li { font-size: 13px; font-weight: 600; padding: 6px 12px; border-radius: 999px; border: 1.5px solid var(--sand); color: var(--body); background: var(--paper); }
 .btn-case { margin-top: 6px; min-height: 48px; padding: 0 24px; font-size: 16px; }
